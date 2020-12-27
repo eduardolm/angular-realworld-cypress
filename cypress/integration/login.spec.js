@@ -8,7 +8,7 @@ describe('Conduit Login', () => {
     });
     it('Dados inválidos', () => {
         cy.login('usuario@inexistente.com', 'senhaerrada');
-        cy.get('.error-message > li:nth-child(1)')
+        cy.get('.error-messages > li')
             .should('contain', 'email or password is invalid');
     });
 });
